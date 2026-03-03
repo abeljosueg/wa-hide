@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "WA Navbar Hider",
+  "version": "1.0.0",
+  "description": "Personal project to hide specific elements of the navbar on WhatsApp Web and avoid distractions.",
+  "icons": {
+    "128": "icon.png"
+  },
+  "action": {
+    "default_icon": "icon.png"
+  },
+  "permissions": [],
+  "host_permissions": ["https://web.whatsapp.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://web.whatsapp.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
